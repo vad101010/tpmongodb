@@ -1,9 +1,9 @@
 package fr.istic.metier;
 
 import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
-import org.mongodb.morphia.annotations.Reference;
 
 @Entity("persons")
 public class Person {
@@ -11,7 +11,7 @@ public class Person {
     @Id
     private ObjectId id;
     private String name;
-    @Reference
+    @Embedded
     private Address address;
 
     public ObjectId getId() {

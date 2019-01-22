@@ -1,8 +1,8 @@
 package fr.istic.metier;
 
-import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Embedded;
 
-@Entity("addresses")
+@Embedded
 public class Address {
 
     private String street;
